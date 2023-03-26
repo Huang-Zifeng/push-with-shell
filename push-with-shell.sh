@@ -1,6 +1,6 @@
 #!/bin/sh
 
-branch_file="/path/to/branch/file"
+branch_file=".last_branch"
 
 if [ -f "$branch_file" ]; then
   branch=$(cat "$branch_file")
@@ -27,11 +27,24 @@ case $choice in
   *) echo "Invalid choice"; exit 1;;
 esac
 
-echo "Sync"
-git pull origin $branch
-
 git add .
 git commit -m "Commit message"
-git push origin $branch
+
+read -r -p "Sync Changes?[Y/n]" input
+case $input in
+    [yY][eE][sS]|[yY])
+        echo "Syncing..."
+        git pull origin $branch
+        git push origin $branch
+        ;;
+    [nN][oO]|[nN])
+        echo "Exit"
+        exit 1
+        ;;
+    *)
+        echo "Invalid input"
+        exit 1
+        ;;
+esac
 
 echo "$branch" > "$branch_file"
