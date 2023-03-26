@@ -27,7 +27,7 @@ case $choice in
   *) echo "Invalid choice"; exit 1;;
 esac
 
-echo "This action"
+echo "Sync"
 git pull origin $branch
 
 git add .
