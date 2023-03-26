@@ -28,7 +28,7 @@ case $choice in
 esac
 
 git add .
-git commit -m "Commit message"
+git commit -m "$commit_message"
 
 read -r -p "Sync Changes?[Y/n]" input
 case $input in
