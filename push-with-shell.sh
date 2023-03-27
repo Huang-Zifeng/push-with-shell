@@ -13,7 +13,7 @@ else
 fi
 
 echo "Please choose a commit message:"
-echo "1) Fixing bugs"
+echo "1) 🐛 Fixing bugs"
 echo "2) Adding new feature"
 echo "3) Refactoring code"
 echo "4) Custom"
