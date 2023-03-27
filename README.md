@@ -25,7 +25,8 @@ sh push-with-shell.sh
 ### Future👻
 
 - [x] 支持自定义branch
-- [ ]  支持emoji
+- [x]  支持emoji
+- [x]  支持补充预设的提交信息
 - [ ] 支持初始化，连接远程仓库
 - [ ] 底层换成Node.js（在一个很遥远的未来）
 
