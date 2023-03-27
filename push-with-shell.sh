@@ -20,9 +20,9 @@ echo "4) Custom"
 read choice
 
 case $choice in
-  1) commit_message="Fixing bugs";;
-  2) commit_message="Adding new feature";;
-  3) commit_message="Refactoring code";;
+  1) echo "Please enter a description:"; read description; commit_message="🐞fix: $description";;
+  2) echo "Please enter a description:"; read description; commit_message="✨feat: $description";;
+  3) echo "Please enter a description:"; read description; commit_message="🦄refactor: $description";;
   4) echo "Please enter a commit message:"; read commit_message;;
   *) echo "Invalid choice"; exit 1;;
 esac
